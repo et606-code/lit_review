@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET606 Research Tools: Comparative Analysis</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configure Tailwind with Soft Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-bg': '#F7F7F7',
+                        'soft-teal': '#66B2B2',
+                        'soft-accent': '#FFD7B0',
+                        'primary-text': '#333333',
+                        'card-bg': '#FFFFFF',
+                        'stage-hover': '#CCE5E5',
+                        'header-bg': '#B0D9D9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F7F7;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        .comparison-table th {
+            background-color: #CCE5E5;
+            color: #333333;
+            font-weight: 600;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #F7F7F7;
+        }
+        .stage-chip-active {
+            background-color: #66B2B2;
+            color: #FFFFFF;
+        }
+        .stage-chip {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 text-primary-text">
+
+<div class="container mx-auto">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12 py-8 bg-header-bg text-primary-text card shadow-lg border-b-4 border-soft-teal">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            ET606 Research Tools: Comparative Analysis
+        </h1>
+        <p class="mt-2 text-xl font-medium">
+            Educational Technology, IIT Bombay
+        </p>
+    </header>
+
+    <!-- Assignment Description Card -->
+    <section class="card bg-card-bg p-6 mb-12 shadow-lg border-l-4 border-soft-teal">
+        <h2 class="text-2xl font-bold text-soft-teal mb-4 border-b border-soft-accent pb-2">
+            The Assignment Task
+        </h2>
+        <p class="text-gray-700">
+            This assignment focused on understanding how different digital tools support researchers
+            across the entire literature review workflow. The emphasis was on comparing
+            <span class="font-semibold">GenAI-based tools</span> (such as Scispace, Consensus, Novix and Elicit)
+            with more traditional or visual tools (such as Google Scholar, Research Rabbit,
+            Connected Papers and H5P).
+        </p>
+        <p class="mt-3 text-gray-700">
+            Each tool was explored hands-on with real research queries. For every tool, the
+            evaluation considered usability, quality of results, transparency of AI output,
+            ability to support critical reading, and how well the tool fit into specific
+            stages of the literature review.
+        </p>
+        <p class="mt-3 text-gray-700 font-semibold">
+            Core Research Question:
+            <span class="text-soft-teal italic">
+                “How do emerging GenAI tools for literature review compare with traditional and
+                visual tools in terms of their strengths, limitations, and best-fit stages within
+                the literature review process?”
+            </span>
+        </p>
+        <p class="mt-3 text-gray-700">
+            The website below summarises this comparative analysis, shows how tools align with
+            different stages of the workflow, and provides an interactive way to explore which
+            tool is most suitable for a particular purpose.
+        </p>
+    </section>
+
+    <!-- Research Stages Section -->
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-primary-text mb-3 text-center">
+            5 Key Stages of the Literature Review Workflow
+        </h2>
+        <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">
+            The literature review is not a single activity. It is a cycle of searching,
+            organising, understanding, connecting and communicating. The tools below were
+            mapped to these five stages so that GenAI tools can be compared not only
+            with each other, but also with traditional databases and visual mapping tools.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+            <!-- Stage 1 -->
+            <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">1</div>
+                <h3 class="font-semibold text-lg mb-1">Searching &amp; Discovery</h3>
+                <p class="text-sm">
+                    Clarifying initial keywords, identifying seminal authors and locating both
+                    classic and recent papers. GenAI tools are used here mainly for quick
+                    overviews and checking relevance of search results.
+                </p>
+                <p class="mt-2 text-xs opacity-80">
+                    Main tools: Google Scholar, Consensus
+                </p>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">2</div>
+                <h3 class="font-semibold text-lg mb-1">Organizing &amp; Managing</h3>
+                <p class="text-sm">
+                    Screening titles and abstracts, clustering papers by theme, and tracking what
+                    has already been read. AI-based report views in tools like Novix and Scispace
+                    support structured note-making and concept grouping.
+                </p>
+                <p class="mt-2 text-xs opacity-80">
+                    Main tools: Novix, Scispace (workspace features)
+                </p>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">3</div>
+                <h3 class="font-semibold text-lg mb-1">Visualizing Connections</h3>
+                <p class="text-sm">
+                    Making sense of how papers are connected: who cites whom, which themes are
+                    emerging, and where there are gaps. Visual tools give an overview that pure
+                    text-based GenAI summaries cannot provide.
+                </p>
+                <p class="mt-2 text-xs opacity-80">
+                    Main tools: Research Rabbit, Connected Papers
+                </p>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">4</div>
+                <h3 class="font-semibold text-lg mb-1">Analyzing &amp; Synthesizing</h3>
+                <p class="text-sm">
+                    Reading in depth, extracting comparable information (context, method,
+                    sample, findings) and synthesising across studies. At this stage,
+                    GenAI tools act as assistants: they speed up extraction but still
+                    require human judgement.
+                </p>
+                <p class="mt-2 text-xs opacity-80">
+                    Main tools: Scispace, Novix, Elicit
+                </p>
+            </div>
+
+            <!-- Stage 5 -->
+            <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">5</div>
+                <h3 class="font-semibold text-lg mb-1">Writing &amp; Presentation</h3>
+                <p class="text-sm">
+                    Transforming insights into a coherent narrative and sharing findings
+                    in an engaging way. AI tools help in structuring sections, while
+                    interactive tools such as H5P support quizzes, presentations and
+                    knowledge checks.
+                </p>
+                <p class="mt-2 text-xs opacity-80">
+                    Main tools: Scispace (writing support), H5P
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GenAI vs Non-GenAI Legend -->
+    <section class="card bg-card-bg p-5 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+            <h3 class="text-xl font-bold text-soft-teal mb-1">Tool Categories</h3>
+            <p class="text-sm text-gray-700 max-w-2xl">
+                To answer the core research question, the tools are grouped into three broad categories.
+                The icons below are also used in the interactive section further down.
+            </p>
+        </div>
+        <div class="flex flex-wrap gap-3 text-sm">
+            <span class="inline-flex items-center gap-2 bg-soft-teal text-white px-3 py-1 rounded-full">
+                <span class="text-lg">🤖</span> GenAI-based
+            </span>
+            <span class="inline-flex items-center gap-2 bg-stage-hover text-primary-text px-3 py-1 rounded-full">
+                <span class="text-lg">📚</span> Traditional / Search
+            </span>
+            <span class="inline-flex items-center gap-2 bg-soft-accent text-primary-text px-3 py-1 rounded-full">
+                <span class="text-lg">🕸️</span> Visual / Interactive
+            </span>
+        </div>
+    </section>
+
+    <!-- Comparative Analysis Table -->
+    <section class="card bg-card-bg shadow-xl mb-12">
+        <h2 class="text-3xl font-bold p-6 text-soft-teal border-b border-soft-accent">
+            Comparative Analysis of Research Tools
+        </h2>
+
+        <div class="overflow-x-auto">
+            <table class="comparison-table w-full text-sm">
+                <thead>
+                <tr>
+                    <th class="w-1/6">Tool</th>
+                    <th class="w-1/12">Type</th>
+                    <th class="w-4/12">Strengths</th>
+                    <th class="w-4/12">Limitations</th>
+                    <th class="w-2/12">Best-fit Stage</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Google Scholar</td>
+                    <td>Traditional</td>
+                    <td>
+                        Comprehensive coverage, simple interface, free access, and strong emphasis
+                        on highly-cited and peer-reviewed papers. Good starting point for any topic.
+                    </td>
+                    <td>
+                        No in-built synthesis, limited advanced filtering compared to specialist
+                        databases, and no AI support for summarising or comparing studies.
+                    </td>
+                    <td>Searching</td>
+                </tr>
+                <tr>
+                    <td>SCISPACE</td>
+                    <td>AI-based</td>
+                    <td>
+                        Deep synthesis of individual papers, structured reports, highlight and
+                        question answering features, and mapped references. Helpful for understanding
+                        complex methods and quickly locating key sections.
+                    </td>
+                    <td>
+                        Some features require premium access (for example, larger projects and
+                        unlimited literature reviews). Generated explanations need to be verified
+                        against the original text.
+                    </td>
+                    <td>Analysis &amp; Writing</td>
+                </tr>
+                <tr>
+                    <td>Novix</td>
+                    <td>AI-based</td>
+                    <td>
+                        Phased workflow (discover, cluster, summarise), clear task-by-task guidance,
+                        and detailed report generation. Useful for organising reading and drafting
+                        early versions of the related work section.
+                    </td>
+                    <td>
+                        AI reasoning is less transparent, and comparison across many papers can feel
+                        “black box”. Fewer options for manually editing clusters inside the tool.
+                    </td>
+                    <td>Organization &amp; Writing</td>
+                </tr>
+                <tr>
+                    <td>Consensus</td>
+                    <td>AI-based</td>
+                    <td>
+                        Uses AI to generate quick, evidence-linked answers to questions, with
+                        citation metrics shown alongside. Very efficient for checking whether
+                        a claim is broadly supported or contested.
+                    </td>
+                    <td>
+                        Answers are brief and may overlook nuance. Less suitable for deep critical
+                        analysis or for understanding detailed methodological differences.
+                    </td>
+                    <td>Searching</td>
+                </tr>
+                <tr>
+                    <td>Research Rabbit</td>
+                    <td>Visual</td>
+                    <td>
+                        Interactive citation graphs, very useful for discovering related authors,
+                        co-authorship patterns and clusters of papers. Enables “snowballing” from
+                        one seed paper to a whole network.
+                    </td>
+                    <td>
+                        Requires at least one relevant starting paper. Dense graphs can be visually
+                        overwhelming and require careful manual pruning.
+                    </td>
+                    <td>Visualization</td>
+                </tr>
+                <tr>
+                    <td>Connected Papers</td>
+                    <td>Visual</td>
+                    <td>
+                        Clean, radial-style citation maps that clearly show prior and derivative works.
+                        Lightweight and fast, making it suitable for a quick overview of a topic’s
+                        structure.
+                    </td>
+                    <td>
+                        Relies on a single seed paper and offers fewer exploration features compared
+                        to Research Rabbit. Less support for ongoing project management.
+                    </td>
+                    <td>Visualization</td>
+                </tr>
+                <tr>
+                    <td>Elicit</td>
+                    <td>AI Assistant</td>
+                    <td>
+                        Generates summary tables where each row is a paper and each column is a key
+                        attribute (for example, population, intervention, outcome). Helps in
+                        comparing studies side-by-side and spotting gaps.
+                    </td>
+                    <td>
+                        Focuses on surface-level attributes, so theoretical depth and quality of
+                        evidence still need manual checking. Coverage can vary by field.
+                    </td>
+                    <td>Analysis</td>
+                </tr>
+                <tr>
+                    <td>H5P</td>
+                    <td>Interactive</td>
+                    <td>
+                        Enables creation of interactive presentations, timelines, quizzes and
+                        knowledge checks. Useful for communicating findings to peers or learners
+                        in an engaging, structured format.
+                    </td>
+                    <td>
+                        Does not support literature search or analysis directly; it is a presentation
+                        layer that relies on inputs prepared elsewhere.
+                    </td>
+                    <td>Presentation</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Interactive Tool Explorer -->
+    <section class="card bg-soft-accent p-6 mb-12 text-primary-text shadow-lg border-t-4 border-soft-teal">
+        <h2 class="text-2xl font-bold mb-2 border-b border-primary-text pb-2 text-soft-teal">
+            Interactive Tool Explorer
+        </h2>
+        <p class="text-sm text-gray-800 mb-4">
+            Use the filters to see which tools are most aligned with your current stage.
+            This section highlights how GenAI tools complement, rather than replace,
+            traditional and visual tools.
+        </p>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <button class="stage-chip stage-chip-active text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="all">
+                All Stages
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Searching">
+                Searching &amp; Discovery
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Organization">
+                Organizing &amp; Managing
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Visualization">
+                Visualizing Connections
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Analysis">
+                Analysis &amp; Synthesis
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Writing">
+                Writing
+            </button>
+            <button class="stage-chip text-xs md:text-sm px-3 py-1 rounded-full shadow-md"
+                    data-stage="Presentation">
+                Presentation
+            </button>
+        </div>
+
+        <!-- Tool Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tool-grid">
+
+            <!-- Google Scholar -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Searching">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Google Scholar</h3>
+                    <span class="text-xs bg-stage-hover px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>📚</span> Traditional
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Initial discovery</p>
+                <p class="text-sm">
+                    Start here when you are not sure which keywords or authors are central. Combine
+                    keyword search with “cited by” and time filters to move from broad to focused.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Use quotation marks for exact phrases.</li>
+                        <li>Sort by “since year” to catch recent work.</li>
+                        <li>Export shortlisted items to your reference manager.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Scispace -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Analysis,Writing,Organization">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Scispace</h3>
+                    <span class="text-xs bg-soft-teal text-white px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🤖</span> GenAI
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Deep reading and drafting</p>
+                <p class="text-sm">
+                    Upload PDFs to receive structured explanations of methods, results and key
+                    terms. Use the “ask” feature to clarify unfamiliar concepts before writing.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Always verify AI-generated answers with the original section.</li>
+                        <li>Highlight and annotate passages you plan to cite directly.</li>
+                        <li>Use generated outlines only as a starting point for your own structure.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Novix -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Organization,Analysis,Writing">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Novix</h3>
+                    <span class="text-xs bg-soft-teal text-white px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🤖</span> GenAI
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Structuring the review</p>
+                <p class="text-sm">
+                    Guides you through stages like collecting papers, clustering themes and
+                    generating draft paragraphs. Helpful when you already have a set of PDFs and
+                    want to move towards a first full draft.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Manually correct AI-generated labels for clusters.</li>
+                        <li>Export reports and rephrase them in your own academic voice.</li>
+                        <li>Use it to identify missing strands that require more searching.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Consensus -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Searching,Analysis">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Consensus</h3>
+                    <span class="text-xs bg-soft-teal text-white px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🤖</span> GenAI
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Quick evidence check</p>
+                <p class="text-sm">
+                    Ask natural-language questions and see short answers supported by
+                    cited studies. Useful to check whether a pattern you notice is already
+                    well-established or still uncertain.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Use specific, focused questions instead of very broad ones.</li>
+                        <li>Open the underlying papers for any claim that looks surprising.</li>
+                        <li>Avoid copying the AI summary directly into your writing.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Research Rabbit -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Visualization,Searching">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Research Rabbit</h3>
+                    <span class="text-xs bg-soft-accent text-primary-text px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🕸️</span> Visual
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Exploring networks</p>
+                <p class="text-sm">
+                    Drop in a key paper and explore clusters of related work. Helps to identify
+                    author networks, related topics and potential gaps where fewer nodes appear.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Begin with a highly cited, clearly relevant seed paper.</li>
+                        <li>Use collections to separate different sub-themes.</li>
+                        <li>Export lists of nodes to your reference manager for later reading.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Connected Papers -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Visualization">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Connected Papers</h3>
+                    <span class="text-xs bg-soft-accent text-primary-text px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🕸️</span> Visual
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Quick structural map</p>
+                <p class="text-sm">
+                    Generates a single graph centred on your seed paper, showing prior and
+                    derivative works. Ideal for a snapshot of where a particular study sits
+                    in the wider conversation.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Try multiple seed papers if the first graph looks too sparse.</li>
+                        <li>Use filters to focus on a specific time window.</li>
+                        <li>Note which regions of the graph you have not yet explored.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- Elicit -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Analysis">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">Elicit</h3>
+                    <span class="text-xs bg-soft-teal text-white px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🤖</span> GenAI
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Comparison tables</p>
+                <p class="text-sm">
+                    Builds tables from multiple papers, letting you compare participants,
+                    interventions, measures and findings side-by-side. This is very helpful
+                    when preparing a synthesis matrix.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Customise the table columns to match your research questions.</li>
+                        <li>Double-check extracted values such as sample size and instruments.</li>
+                        <li>Export tables and refine them manually before using in a report.</li>
+                    </ul>
+                </details>
+            </article>
+
+            <!-- H5P -->
+            <article class="bg-card-bg rounded-xl p-4 shadow-inner flex flex-col gap-2"
+                     data-stages="Presentation">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-soft-teal">H5P</h3>
+                    <span class="text-xs bg-soft-accent text-primary-text px-2 py-1 rounded-full flex items-center gap-1">
+                        <span>🕸️</span> Interactive
+                    </span>
+                </div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Best for: Sharing results</p>
+                <p class="text-sm">
+                    Use H5P to transform key insights from your review into interactive slides,
+                    quizzes or timelines. This is especially useful for teaching or for
+                    communicating findings to non-expert audiences.
+                </p>
+                <details class="mt-1 text-xs">
+                    <summary class="cursor-pointer text-soft-teal font-semibold">
+                        Usage tips
+                    </summary>
+                    <ul class="list-disc pl-4 mt-1 space-y-1">
+                        <li>Design short knowledge checks based on your main themes.</li>
+                        <li>Use images of citation maps or tables to support explanations.</li>
+                        <li>Keep interaction simple so that focus stays on the underlying research.</li>
+                    </ul>
+                </details>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Summary Insights -->
+    <section class="card bg-card-bg p-6 mb-12 shadow-lg border-t-4 border-soft-teal">
+        <h2 class="text-2xl font-bold mb-3 text-soft-teal border-b border-soft-accent pb-2">
+            Key Insights from the Comparative Analysis
+        </h2>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-gray-800">
+            <li>
+                <span class="font-semibold">GenAI tools are most powerful in the mid-stages</span> of the
+                workflow (analysis, organisation and early drafting). They accelerate reading and
+                pattern spotting, but still depend on human critical judgement.
+            </li>
+            <li>
+                <span class="font-semibold">Traditional databases remain essential</span> for reliable,
+                transparent discovery of peer-reviewed work. GenAI search is a supplement, not a
+                replacement.
+            </li>
+            <li>
+                <span class="font-semibold">Visual tools fill a gap that GenAI cannot fully cover</span>:
+                they show structure at a glance and help identify clusters, bridges and gaps in the
+                literature.
+            </li>
+            <li>
+                <span class="font-semibold">Best results come from a hybrid pipeline</span> where each
+                tool is used for what it is genuinely good at, instead of forcing a single GenAI
+                platform to do everything.
+            </li>
+            <li>
+                <span class="font-semibold">Responsible use of GenAI is critical</span>: every AI-generated
+                summary or claim must be cross-checked with the original paper, and citations should
+                always be verified manually.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Educational Technology, IIT Bombay. All rights reserved.</p>
+    </footer>
+
+</div>
+
+<!-- Simple filtering script -->
+<script>
+    const chips = document.querySelectorAll('.stage-chip');
+    const cards = document.querySelectorAll('#tool-grid article');
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const stage = chip.getAttribute('data-stage');
+
+            // update chip styles
+            chips.forEach(c => c.classList.remove('stage-chip-active'));
+            chip.classList.add('stage-chip-active');
+
+            // filter cards
+            cards.forEach(card => {
+                if (stage === 'all') {
+                    card.style.display = 'flex';
+                    return;
+                }
+                const stages = card.getAttribute('data-stages').split(',');
+                const trimmed = stages.map(s => s.trim());
+                if (trimmed.includes(stage)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
